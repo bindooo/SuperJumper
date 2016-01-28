@@ -43,17 +43,17 @@ public class MainMenuScreen extends GLScreen {
                 guiCam.touchToWorld(touchPoint);
                 if(OverlapTester.pointInRectangle(playBounds, touchPoint)) {
                     Assets.playSound(Assets.clickSound);
-                    //game.setScreen(new GameScreen(game));
+                    game.setScreen(new GameScreen(game));
                     return;
                 }
                 if(OverlapTester.pointInRectangle(highscoresBounds, touchPoint)) {
                     Assets.playSound(Assets.clickSound);
-                    //game.setScreen(new HighscoresScreen(game));
+                    game.setScreen(new HighScoreScreen(game));
                     return;
                 }
                 if(OverlapTester.pointInRectangle(helpBounds, touchPoint)) {
                     Assets.playSound(Assets.clickSound);
-                    //game.setScreen(new HelpScreen(game));
+                    game.setScreen(new HelpScreen(game));
                     return;
                 }
                 if(OverlapTester.pointInRectangle(soundBounds, touchPoint)) {
